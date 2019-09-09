@@ -51,8 +51,28 @@ mlops_complainer
 ├── README.md
 ├── data
 │   └── ... created by Makefile, data (including persisted models) live here ...
-└── experiments
+├── experiments
     └── ... exploratory scripts live here ...
+├── jobs
+│   └── ... CDSW job scripts live here ...
+└── complainer
+    ├── ... modular code ...
+    └── tests
+        └── ... tests ...
 ```
 
-The experiments directory contains scripts to be run interactively or through CDSW experiments.
+The `experiments` directory contains scripts to be run interactively or through CDSW experiments.
+
+The `complainer` directory is an installable python library containing code upon which some experiments and jobs depend.
+
+The `jobs` directory contains imperative scripts that tie together the `complainer` module functionality (and some other well used tools from the python ecosystem).
+Jobs are how we "do things" with this project, and are where all I/O and side-effectful actions occur.
+
+
+## Development
+
+When developing the complainer library, run tests with
+
+```bash
+make test
+```
