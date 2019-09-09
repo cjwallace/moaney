@@ -1,7 +1,7 @@
 .PHONY: dirs data requirements
 
 dirs:
-	mkdir -p data/{raw,split,processed,models}
+	bash -c "mkdir -p data/{raw,split,processed,models}"
 
 data:
 	curl \
