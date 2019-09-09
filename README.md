@@ -2,7 +2,7 @@
 
 A fictional company with real problems.
 
-# ## Setup
+## Setup
 
 We use a `Makefile` to encapsulate repeatable tasks.
 
@@ -25,3 +25,21 @@ Python requirements can be installed with:
 ```bash
 make requirements
 ```
+
+## Directory structure
+
+The project has this schematic structure
+
+```
+mlops_complainer
+├── .gitignore
+├── Makefile
+├── requirements.txt
+├── README.md
+├── data
+│   └── ... created by Makefile, data (including persisted models) live here ...
+└── experiments
+    └── ... exploratory scripts live here ...
+```
+
+The experiments directory contains scripts to be run interactively or through CDSW experiments.
